@@ -1,20 +1,21 @@
 const { setWorldConstructor } = require("cucumber");
 
-class CustomWorld {
+class AddFeaure {
   constructor() {
     this.firstOperand = '';
     this.secondOperand = '';
     this.result = '';
   }
 
-  setFirstOperand(number) {
+  init(number) {
     this.firstOperand = number;
   }
  
   addTo(operand) {
     this.secondOperand = operand;
-    this.result = 'II';
+    this.result = this.firstOperand + this.secondOperand;
   }
+
 }
 
-setWorldConstructor(CustomWorld);
+setWorldConstructor(AddFeaure);

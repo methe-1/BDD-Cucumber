@@ -1,14 +1,14 @@
-const { Given, When, Then } = require("cucumber"); 
+const { Given, When, Then } = require("cucumber");
 const { expect } = require("chai");
- 
-Given('I have the number {string}', function (string) {
-  this.setFirstOperand(string);
+
+Given("I have the number {int}", function (int) {
+  this.init(int);
 });
 
-When('I add it to the number {string}', function (string) {
-  this.addTo(string);
+When("I add it to the number {int}", function (int) {
+    this.addTo(int);
 });
 
-Then('the result should be the number {string}', function (string) {
-  expect(this.result).to.eql(string);
+Then("the result should be the number {int}", function (int) {
+  expect(this.result).to.be.equal(int)
 });
